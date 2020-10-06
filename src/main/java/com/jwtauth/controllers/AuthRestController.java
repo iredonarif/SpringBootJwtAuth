@@ -100,7 +100,7 @@ public class AuthRestController {
             });
         }
         else {
-            roles.add(new Role("USER"));
+            roles.add(new Role("ROLE_USER"));
         }
         user.setRoles(roles);
         user.setPassword(encoder.encode(user.getPassword()));
