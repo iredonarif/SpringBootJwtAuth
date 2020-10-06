@@ -1,5 +1,6 @@
 package com.jwtauth.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
@@ -41,6 +42,7 @@ public class User {
 
     @NotBlank
     @Length(min = 8)
+    @JsonIgnore
     private String password;
 
     public User(String firstName, String lastName, String phoneNumber, String email, String address, String gender, List<Role> roles, String password) {
